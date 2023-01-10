@@ -35,8 +35,6 @@ void connect_wifi() {
   Serial.println("\nConnected.");
 }
 
-
-
 void setup() {
   // Begin serial communication
   Serial.begin(9600);
@@ -47,8 +45,8 @@ void setup() {
   connect_wifi();
   
   // Configure MQTT server
-  mqtt_client.setServer(mqtt_server, mqtt_port);
   // ...
+  mqtt_client.setServer(mqtt_server, mqtt_port);
 
   // Start listening to the DHT11
   dht.begin();

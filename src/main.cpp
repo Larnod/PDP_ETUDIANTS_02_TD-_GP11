@@ -113,12 +113,13 @@ void setup() {
   }
 
   // Send data to the broker with MQTT
-  // ...
+  // ..
   if ( mqtt_client.connect(client_id,mqtt_user,mqtt_pass) ) 
   {
     mqtt_client.publish("TD06_GP11/temp" , String(temp_measure).c_str());
     mqtt_client.publish("TD06_GP11/relhum" , String(relative_humidity_measure).c_str());
   }
+
 
 
   Serial.println("Going to sleep for 5 seconds...");
